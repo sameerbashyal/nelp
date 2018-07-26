@@ -1,0 +1,63 @@
+<main id="main" class="site-main main">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="container container--xs">
+                    <div class="woocommerce">
+
+                        <div id="signup_div_wrapper">
+                            <h1 class="mb-1 text-center">Sign up</h1>
+                            <p class="fs-14 text-gray text-center mb-5">Redownload themes, get support, and review themes.</p>
+
+                            <p class=" form-row form-row-wide"> {{#if errors}} {{#each errors}}
+
+                                <div class="invalid-feedback alert alert-danger">{{msg}}</div>
+
+                                {{/each}} {{/if}}
+
+                            </p>
+                            <form method="post" class="register" novalidate="novalidate" action="/users/signup">
+                                <div class="form-group row">
+
+                                    <div class="col-sm-6 mb-4 mb-sm-0">
+                                        <label>First name <span class="required">*</span></label>
+                                        <input type="text" class=" input-text" name="firstname">
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Last name <span class="required">*</span></label>
+                                        <input type="text" class=" input-text" name="lastname">
+
+                                    </div>
+                                </div>
+
+                                <p class=" form-row form-row-wide">
+                                    <label for="reg_email">Email address <span class="required">*</span></label>
+                                    <input type="email" class="input-text form-control" name="email" id="reg_email">
+
+                                    <p class=" form-row form-row-wide">
+                                        <label for="reg_password">Password <span class="required">*</span></label>
+                                        <input type="password" class=" input-text form-control" name="password" id="reg_password">
+
+                                    </p>
+                                    <p class=" form-row form-row-wide">
+                                        <label for="reg_password">Confirm Password <span class="required">*</span></label>
+                                        <input type="password" class=" input-text form-control" name="password2" id="reg_password">
+
+                                    </p>
+                                    <p class="form-row">
+
+                                        <input type="submit" class="btn btn-brand btn-block btn-lg mb-4 mt-3" style="margin:0;" name="register" value="Sign Up">
+
+                                    </p>
+                            </form>
+
+                            <p class="text-gray-soft text-center small mb-2">Already have an account? <a href="/users/signin">Sign in</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

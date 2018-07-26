@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+
+  <body>
+    
+<header>  <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        {{!-- <div class="d-flex ml-auto">
+
+                        </div> --}}
+                        <div class="collapse navbar-collapse" id="globalNavbar">
+                         
+                            <ul class="navbar-nav mr-auto order-1">
+                                <li class="nav-item"><a href="/" class="navbar-brand">Evenap</a>
+</li>
+                                <li class="nav-item"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#" >About</a>
+                                 </li>
+                                 <li class="nav-item"><a class="nav-link" href="#">Services</a></li></ul>
+                                
+                                 <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
+                                   {{#if user}}
+ 
+
+                                      <li class="nav-item"><a class="nav-link" href="/createEvent">Create an Event</a></li>
+                               <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="circle-box"> <img src="/images/userprofile/default-avatar.png"> </div>    {{user.firstname }} 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="nav-link" href="/users/userprofile/{{user._id}}">
+  My Account</a>
+   
+           <a class="nav-link" href="/users/signout">
+                                                            Logout                    </a>
+   
+        
+        </div>
+      </li> 
+  {{else}}
+                                      <li class="nav-item"><a class="nav-link" href="/users/signin">Sign in</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/users/signup">Sign up</a></li>
+                              
+                               {{/if}}
+                                 </ul>
+                                </div>
+                    </div>
+                </nav>
+
+
+   </header>
+     
+  <div class="container"> {{#if success_msg}}
+<div class="alert alert-success">{{success_msg}}</div>
+{{/if}}
+
+{{#if error_msg}}
+<div class="alert alert-danger">{{error_msg}}</div>
+{{/if}}
+{{#if error}}
+<div class="alert alert-danger">{{error}}</div>
+{{/if}}
+
+    </div>
+
+    
+{{{body}}}
+
+<footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+               
+                                                <div class="footer__item d-lg-flex justify-content-lg-between align-items-lg-center">
+                        <ul id="menu-footer" class="nav sub-nav footer__sub-nav"><li id="menu-item-1194" class="menu-item "><a title="Help Center" href="#">Help Center</a></li>
+<li class="menu-item"><a title="Terms of Service" href="#">Terms of Service</a></li>
+<li  class="menu-item"><a title="Licenses" href="#">Licenses</a></li>
+</ul>                        <p class="hidden-sm-down d-none d-lg-block">© 2018 Samerd Inc. </a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+
+</html>

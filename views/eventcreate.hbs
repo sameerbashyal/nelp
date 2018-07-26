@@ -1,0 +1,134 @@
+<main id="main" class="site-main main">
+   <section class="section">
+      <div class="container">
+         <div class="row">
+            <div class="container container--xs">
+               <div class="woocommerce">
+                  <div id="signup_div_wrapper">
+                     <h1 class="mb-1 text-center">Create Event </h1>
+                     <p class="fs-14 text-gray text-center mb-5">Redownload themes, get support, and review themes.</p>
+                     <p class=" form-row form-row-wide"> {{#if errors}}
+                        {{#each errors}}
+                     <div class="invalid-feedback alert alert-danger">{{msg}}</div>
+                     {{/each}}
+                     {{/if}}
+                     </p>     
+                     <form method="post" class="register" novalidate="novalidate" action="/events/event" enctype="multipart/form-data">
+   <!-- Event Title -->
+                        <p class=" form-row form-row-wide">
+                           <label for="reg_email">Event Name <span class="required">*</span></label>
+                           <input type="text" class="input-text form-control" name="event_name"  >
+                        </p>
+                      
+
+<!-- Event Description>-->
+ <p class=" form-row form-row-wide">
+                           <label for="reg_email">Event Description <span class="required">*</span></label>
+                           <textarea type="text" class="input-text form-control" name="event_description"  >Event Description </textarea>
+                        </p>
+
+<!-- Event Date -->
+
+                        <div class="form-group row">
+                           <div class="col-sm-6 mb-4 mb-sm-0">
+                              <label>Event Start Date <span class="required">*</span></label>
+                            
+  <input class="form-control" type="date" value="2011-08-19" name="event_start_date" id="example-date-input">
+  
+            </div>
+                           <div class="col-sm-6">
+                              <label>Event End Date <span class="required">*</span></label>
+                           <input class="form-control" type="date"  name="event_end_date" value="2011-08-19" id="example-date-input">
+                           </div>
+                        </div>
+<!-- Event Time -->
+
+                        <div class="form-group row">
+                           <div class="col-sm-6 mb-4 mb-sm-0">
+                              <label>Event Start Time <span class="required">*</span></label>
+                         <input class="form-control" type="time"   name="event_start_time" value="13:45:00" id="example-time-input">
+                           </div>
+                           <div class="col-sm-6">
+                              <label>Event End Time <span class="required">*</span></label>
+                           <input class="form-control" type="time" name="event_end_time" value="13:45:00" id="example-time-input">
+                           </div>
+                        </div>
+
+
+ <!-- Event Category -->
+
+                        <p class=" form-row form-row-wide">
+                           <label for="event_image">Event Image <span class="required">*</span></label>
+                          
+
+                           <input type="file" class=" input-text form-control form-control-file" name="event_image"  id="exampleInputFile" aria-describedby="fileHelp">
+                        </p>
+
+   <!-- Event Category -->
+
+                        <p class=" form-row form-row-wide">
+                           <label for="reg_email">Event Category <span class="required">*</span></label>
+                           <input type="text" class="input-text form-control" name="event_category" >
+                        </p>
+
+ <!-- Event City -->
+                       <div class="form-group row">
+                           <div class="col-sm-6 mb-4 mb-sm-0">
+                              <label>Event City <span class="required">*</span></label>
+                              <div class="form-group">
+    <select class="form-control" id="exampleFormControlSelect1" name="event_city">
+      <option>Kathmandu</option>
+      <option>Pokhara</option>
+      <option>Butwal</option>
+      <option>Dang</option>
+      <option>Jhapa</option>
+    </select>
+  </div>
+                           </div>
+                           <div class="col-sm-6">
+                              <label>Event Area <span class="required">*</span></label>
+                              <input type="text" class=" input-text" name="event_area">
+                           </div>
+                        </div>
+
+<hr>
+<h5>Event Organizer's Basic Details </h5>
+<hr>
+
+
+   <!-- Event Organizer Details -->
+  <div class="form-group row">
+                           <div class="col-sm-6 mb-4 mb-sm-0">
+                              <label>Event Organizer Name<span class="required">*</span></label>
+                              <input type="text" class=" input-text" name="event_organizer_name" >
+                           </div>
+                           <div class="col-sm-6 mb-4 mb-sm-0">
+                              <label>Event Organizer Phone no.<span class="required">*</span></label>
+                              <input type="text" class=" input-text" name="event_organizer_phone" >
+                           </div>
+                           
+                        </div>
+
+   <!-- Event Organizer Phone & websites -->
+
+                          
+
+  
+                 
+                        <p class="form-row">
+                           <input type="hidden" name="posted_user_id"  value="{{user.id}}">
+                              <input type="hidden" name="created_at">
+                           <input type="submit" class="btn btn-brand btn-block btn-lg mb-4 mt-3" style="margin:0;" name="register" value="Create  event">
+                           {{!-- 
+                        <div class="invalid-feedback">This field is required</div>
+                        --}}
+                        </p>
+                     </form>
+                    
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>

@@ -1,0 +1,34 @@
+<main id="main" class="site-main main">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="container container--mini">
+                    <h1 class="mb-1 text-center">Sign in</h1>
+                    <form name="loginform" id="loginform" action="/users/signin" method="post">
+
+                        <div class="form-group">
+                            <label for="user_login">Email</label>
+                            <input type="text" name="email" id="user_login" class="form-control" value="" size="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_pass">Password</label>
+                            <a class="form-sublink" href="#">Forgot password?</a>
+                            <input type="password" name="password" id="user_pass" class="form-control" value="" size="20">
+                        </div>
+
+                        <p class="login-remember">
+                            <label>
+                                <input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember Me</label>
+                        </p>
+                        <div class="form-group">
+                            <input type="submit" name="wp-submit" id="wp-submit" class="btn btn-brand btn-block mb-4" value="Sign In">
+                            <input type="hidden" name="redirect_to" value="#">
+                        </div>
+
+                    </form>
+                    <p class="small text-center text-gray-soft">Don't have an account yet? <a href="/signup">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
